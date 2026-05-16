@@ -1,0 +1,66 @@
+{# app/templates/skills.html #}
+{% extends "base.html" %}
+
+{% block title %}Skills | Alex Morgan{% endblock %}
+
+{% block content %}
+<section class="fade-in">
+    <h1 class="section-title">Technical Skills</h1>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div>
+            <h2 style="margin-bottom: 1rem;">🎨 Frontend</h2>
+            <div class="skills-grid">
+                {% for skill in skills.frontend %}
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">{{ skill.icon }}</span>
+                        <span class="skill-name">{{ skill.name }}</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: {{ skill.level }}%"></div>
+                    </div>
+                    <div class="skill-percent">{{ skill.level }}%</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div>
+            <h2 style="margin-bottom: 1rem;">⚙️ Backend</h2>
+            <div class="skills-grid">
+                {% for skill in skills.backend %}
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">{{ skill.icon }}</span>
+                        <span class="skill-name">{{ skill.name }}</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: {{ skill.level }}%"></div>
+                    </div>
+                    <div class="skill-percent">{{ skill.level }}%</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div>
+            <h2 style="margin-bottom: 1rem;">🛠️ Tools & DevOps</h2>
+            <div class="skills-grid">
+                {% for skill in skills.tools %}
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">{{ skill.icon }}</span>
+                        <span class="skill-name">{{ skill.name }}</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: {{ skill.level }}%"></div>
+                    </div>
+                    <div class="skill-percent">{{ skill.level }}%</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

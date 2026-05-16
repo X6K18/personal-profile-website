@@ -1,0 +1,23 @@
+
+{
+  "frontend": [
+    {"name": "React", "level": 90, "icon": "⚛️"},
+    {"name": "Vue.js", "level": 85, "icon": "💚"},
+    {"name": "TypeScript", "level": 88, "icon": "📘"},
+    {"name": "Tailwind CSS", "level": 92, "icon": "🎨"},
+    {"name": "Next.js", "level": 82, "icon": "▲"}
+  ],
+  "backend": [
+    {"name": "Python", "level": 95, "icon": "🐍"},
+    {"name": "Node.js", "level": 88, "icon": "🚀"},
+    {"name": "Django", "level": 85, "icon": "🎯"},
+    {"name": "PostgreSQL", "level": 87, "icon": "🐘"},
+    {"name": "MongoDB", "level": 80, "icon": "🍃"}
+  ],
+  "tools": [
+    {"name": "Docker", "level": 82, "icon": "🐳"},
+    {"name": "Git/GitHub", "level": 94, "icon": "📌"},
+    {"name": "AWS", "level": 78, "icon": "☁️"},
+    {"name": "Figma", "level": 85, "icon": "🎨"}
+  ]
+}

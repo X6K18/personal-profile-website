@@ -1,0 +1,29 @@
+
+{
+  "personal": [
+    {
+      "title": "AI Image Generator",
+      "description": "A web application that generates unique images using Stable Diffusion API. Features real-time preview and download options.",
+      "tech": ["Python", "FastAPI", "React", "Tailwind"],
+      "image": null,
+      "link": "https://github.com/yourusername/ai-image-gen",
+      "demo": "https://ai-image-gen.demo.com"
+    },
+    {
+      "title": "TaskFlow Pro",
+      "description": "Advanced task management system with real-time updates, team collaboration features, and analytics dashboard.",
+      "tech": ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+      "image": null,
+      "link": "https://github.com/yourusername/taskflow-pro",
+      "demo": "https://taskflow-pro.demo.com"
+    },
+    {
+      "title": "Weather Dashboard",
+      "description": "Interactive weather application with 7-day forecast, interactive maps, and weather alerts.",
+      "tech": ["Vue.js", "D3.js", "Express", "OpenWeather API"],
+      "image": null,
+      "link": "https://github.com/yourusername/weather-dashboard",
+      "demo": "https://weather-dashboard.demo.com"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+
+{
+  "name": "Alex Morgan",
+  "title": "Full Stack Developer & AI Enthusiast",
+  "bio": "Building innovative solutions with modern web technologies. Passionate about clean code, user experience, and emerging tech trends.",
+  "avatar": "images/avatar.svg",
+  "email": "alex.morgan@example.com",
+  "location": "San Francisco, CA",
+  "experience": [
+    {
+      "company": "TechCorp Innovations",
+      "position": "Senior Full Stack Developer",
+      "period": "2021 - Present",
+      "description": "Leading frontend development team, architecting scalable React applications, and mentoring junior developers."
+    },
+    {
+      "company": "Digital Solutions Inc",
+      "position": "Web Developer",
+      "period": "2018 - 2021",
+      "description": "Developed responsive web applications, integrated REST APIs, and optimized database queries."
+    },
+    {
+      "company": "Startup Hub",
+      "position": "Junior Developer",
+      "period": "2016 - 2018",
+      "description": "Built interactive frontend components and collaborated on full-stack features."
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc. Computer Science",
+      "school": "Stanford University",
+      "year": "2016"
+    },
+    {
+      "degree": "B.E. Software Engineering",
+      "school": "University of Washington",
+      "year": "2014"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername"
+  }
+}

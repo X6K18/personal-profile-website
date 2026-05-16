@@ -1,0 +1,42 @@
+{# app/templates/about.html #}
+{% extends "base.html" %}
+
+{% block title %}About Me | Alex Morgan{% endblock %}
+
+{% block content %}
+<section class="fade-in">
+    <h1 class="section-title">About Me</h1>
+    
+    <div style="margin-bottom: 3rem;">
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+            I'm a passionate Full Stack Developer with over 8 years of experience building web applications 
+            that make a difference. I love turning complex problems into simple, elegant solutions.
+        </p>
+    </div>
+    
+    <div class="timeline-section">
+        <div>
+            <h2 style="margin-bottom: 1.5rem;">💼 Experience</h2>
+            {% for exp in profile.experience %}
+            <div class="timeline-card">
+                <div class="timeline-title">{{ exp.position }}</div>
+                <div class="timeline-subtitle">{{ exp.company }}</div>
+                <div class="timeline-period">{{ exp.period }}</div>
+                <p class="timeline-description">{{ exp.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div>
+            <h2 style="margin-bottom: 1.5rem;">🎓 Education</h2>
+            {% for edu in profile.education %}
+            <div class="timeline-card">
+                <div class="timeline-title">{{ edu.degree }}</div>
+                <div class="timeline-subtitle">{{ edu.school }}</div>
+                <div class="timeline-period">{{ edu.year }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

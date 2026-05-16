@@ -1,0 +1,54 @@
+{# app/templates/index.html #}
+{% extends "base.html" %}
+
+{% block title %}Alex Morgan | Full Stack Developer{% endblock %}
+
+{% block content %}
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h1>Nguyen Phan</h1>
+        <div class="title">Data Analyst & Passionné d'Écriture</div>
+        <p class="bio">Building innovative solutions with modern web technologies. Passionate about clean code, user experience, and emerging tech trends.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('projects') }}" class="btn btn-primary">View Projects</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/nguyen.jpg') }}" alt="Nguyen Phan">
+    </div>
+</section>
+
+<section class="highlights" style="margin-top: 4rem;">
+    <h2 class="section-title">Featured Work</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>AI Image Generator</h3>
+            <p>A web application that generates unique images using Stable Diffusion API. Features real-time preview and download options.</p>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">React</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>TaskFlow Pro</h3>
+            <p>Advanced task management system with real-time updates, team collaboration features, and analytics dashboard.</p>
+            <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">PostgreSQL</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Weather Dashboard</h3>
+            <p>Interactive weather application with 7-day forecast, interactive maps, and weather alerts.</p>
+            <div class="project-tech">
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">D3.js</span>
+                <span class="tech-tag">Express</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

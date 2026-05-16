@@ -1,0 +1,12 @@
+
+{
+  "email": "alex.morgan@example.com",
+  "phone": "+1 (555) 123-4567",
+  "address": "San Francisco, CA 94105",
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername",
+    "devto": "https://dev.to/yourusername"
+  }
+}

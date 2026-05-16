@@ -1,0 +1,60 @@
+{# app/templates/projects.html #}
+{% extends "base.html" %}
+
+{% block title %}Projects | Alex Morgan{% endblock %}
+
+{% block content %}
+<section class="fade-in">
+    <h1 class="section-title">My Projects</h1>
+    
+    <div>
+        <h2 style="margin-bottom: 1.5rem;">✨ Personal Projects</h2>
+        <div class="projects-grid">
+            {% for project in projects.personal %}
+            <div class="project-card">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <div class="project-tech">
+                    {% for tech in project.tech %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <div class="project-links">
+                    {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="project-link">📦 GitHub →</a>
+                    {% endif %}
+                    {% if project.demo %}
+                    <a href="{{ project.demo }}" target="_blank" class="project-link">🌐 Live Demo →</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% if github_repos %}
+    <div class="github-section">
+        <h2 style="margin-bottom: 1.5rem;">🐙 GitHub Projects</h2>
+        <div class="github-grid">
+            {% for repo in github_repos %}
+            <div class="github-card">
+                <h3>{{ repo.name }}</h3>
+                <p>{{ repo.description or 'No description available' }}</p>
+                <div class="github-stats">
+                    <span>⭐ {{ repo.stargazers_count }}</span>
+                    <span>🔱 {{ repo.forks_count }}</span>
+                    <span>📅 {{ repo.updated_at[:10] }}</span>
+                </div>
+                <div class="project-links" style="margin-top: 0.8rem;">
+                    <a href="{{ repo.html_url }}" target="_blank" class="project-link">📦 View on GitHub →</a>
+                    {% if repo.homepage %}
+                    <a href="{{ repo.homepage }}" target="_blank" class="project-link">🌐 Live Demo →</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

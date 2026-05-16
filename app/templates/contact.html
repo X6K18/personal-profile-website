@@ -1,0 +1,49 @@
+{# app/templates/contact.html #}
+{% extends "base.html" %}
+
+{% block title %}Contact | Alex Morgan{% endblock %}
+
+{% block content %}
+<section class="fade-in">
+    <h1 class="section-title">Get In Touch</h1>
+    
+    <div class="contact-grid">
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>{{ contacts.email }}</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>{{ contacts.phone }}</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>{{ contacts.address }}</div>
+            </div>
+            
+            <div class="social-links">
+                <a href="{{ contacts.social.github }}" target="_blank" class="social-btn">🐙 GitHub</a>
+                <a href="{{ contacts.social.linkedin }}" target="_blank" class="social-btn">🔗 LinkedIn</a>
+                <a href="{{ contacts.social.twitter }}" target="_blank" class="social-btn">🐦 Twitter</a>
+                <a href="{{ contacts.social.devto }}" target="_blank" class="social-btn">📝 Dev.to</a>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <form onsubmit="return submitContact(event)">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message →</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
