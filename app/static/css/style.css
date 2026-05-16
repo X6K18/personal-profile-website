@@ -69,15 +69,43 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.nav-links a:hover,
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-links a:hover {
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 12px var(--accent-primary);
+}
+
 .nav-links a.active {
-  color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    box-shadow: 0 0 12px var(--accent-primary);
 }
 
 .mobile-menu-btn {
