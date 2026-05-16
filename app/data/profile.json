@@ -1,11 +1,11 @@
 
 {
-  "name": "Alex Morgan",
-  "title": "Full Stack Developer & AI Enthusiast",
+  "name": "Nguyen Phan",
+  "title": "Data Analyst & Passionné d'Écriture",
   "bio": "Building innovative solutions with modern web technologies. Passionate about clean code, user experience, and emerging tech trends.",
-  "avatar": "images/avatar.svg",
-  "email": "alex.morgan@example.com",
-  "location": "San Francisco, CA",
+  "avatar": "images/nguyen.jpg",
+  "email": "pn629503@gmail.com",
+  "location": "Tân Phú, Tây Thạnh Ward, Ho Chi Minh City, Vietnam",
   "experience": [
     {
       "company": "TechCorp Innovations",

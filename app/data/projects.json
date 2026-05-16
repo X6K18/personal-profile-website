@@ -2,12 +2,12 @@
 {
   "personal": [
     {
-      "title": "AI Image Generator",
-      "description": "A web application that generates unique images using Stable Diffusion API. Features real-time preview and download options.",
-      "tech": ["Python", "FastAPI", "React", "Tailwind"],
+      "title": "California Housing Price Prediction",
+      "description": "An end-to-end machine learning web application for predicting California housing prices using multiple regression models including Linear Regression, Random Forest, and XGBoost. Features interactive dashboards, real-time predictions, model evaluation metrics, and data visualization.",
+      "tech": ["Python", "Flask", "Scikit-learn", "XGBoost", "Pandas", "Tailwind CSS"],
       "image": null,
-      "link": "https://github.com/yourusername/ai-image-gen",
-      "demo": "https://ai-image-gen.demo.com"
+      "link": "https://github.com/X6K18/end-to-end-california-housing-ml-project",
+      "demo": null
     },
     {
       "title": "TaskFlow Pro",
