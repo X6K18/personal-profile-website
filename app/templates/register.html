@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Create account - Nguyen Phan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-avatar">
+            <div class="auth-logo">NP</div>
+            <h2>Create account</h2>
+            <p class="auth-email">Sign up to get started</p>
+        </div>
+        
+        <div id="alert-container"></div>
+        
+        <form id="register-form" class="auth-form">
+            <div class="input-group floating">
+                <input type="text" id="fullname" name="fullname" placeholder=" ">
+                <label for="fullname">Full Name</label>
+            </div>
+            
+            <div class="input-group floating">
+                <input type="text" id="username" name="username" placeholder=" " required>
+                <label for="username">Username</label>
+            </div>
+            
+            <div class="input-group floating">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+            
+            <div class="input-group floating">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+            </div>
+            <div class="password-strength">
+                <div id="strength-bar" class="strength-bar"></div>
+                <div id="strength-text" class="strength-text"></div>
+            </div>
+            
+            <div class="input-group floating">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder=" " required>
+                <label for="confirm_password">Confirm Password</label>
+            </div>
+            
+            <button type="submit" class="auth-btn auth-btn-primary">Create account →</button>
+        </form>
+        
+        <div class="auth-divider">
+            <span>or</span>
+        </div>
+        
+        <div class="auth-alternative">
+            Already have an account? <a href="{{ url_for('login') }}">Sign in</a>
+        </div>
+        
+        <div class="switch-account">
+            <a href="{{ url_for('index') }}">← Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+<script>
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const type = passwordInput.type === 'password' ? 'text' : 'password';
+    passwordInput.type = type;
+}
+
+// Password strength checker
+const passwordInput = document.getElementById('password');
+if (passwordInput) {
+    passwordInput.addEventListener('input', function(e) {
+        const password = e.target.value;
+        let strength = 0;
+        if (password.length >= 6) strength++;
+        if (password.length >= 10) strength++;
+        if (/[A-Z]/.test(password)) strength++;
+        if (/[0-9]/.test(password)) strength++;
+        if (/[^A-Za-z0-9]/.test(password)) strength++;
+        
+        const strengthBar = document.getElementById('strength-bar');
+        const strengthText = document.getElementById('strength-text');
+        
+        if (strength <= 2) {
+            strengthBar.className = 'strength-bar weak';
+            strengthText.textContent = 'Weak password';
+        } else if (strength <= 4) {
+            strengthBar.className = 'strength-bar medium';
+            strengthText.textContent = 'Medium password';
+        } else {
+            strengthBar.className = 'strength-bar strong';
+            strengthText.textContent = 'Strong password';
+        }
+        
+        if (!password) {
+            strengthBar.className = 'strength-bar';
+            strengthText.textContent = '';
+        }
+    });
+}
+</script>
+{% endblock %}

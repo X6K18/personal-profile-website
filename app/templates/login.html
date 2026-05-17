@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Sign in - Nguyen Phan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-avatar">
+            <div class="auth-logo">NP</div>
+            <h2>Nguyen Phan</h2>
+            <p class="auth-email">Sign in to your account</p>
+        </div>
+        
+        <div id="alert-container"></div>
+        
+        <form id="login-form" class="auth-form">
+            <div class="input-group floating">
+                <input type="text" id="username" name="username" placeholder=" " required autocomplete="off">
+                <label for="username">Email or Username</label>
+            </div>
+            
+            <div class="input-group floating">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+            </div>
+            
+            <button type="submit" class="auth-btn auth-btn-primary">Sign in →</button>
+        </form>
+        
+        <div class="auth-divider">
+            <span>or</span>
+        </div>
+        
+        <div class="auth-alternative">
+            Don't have an account? <a href="{{ url_for('register') }}">Create account</a>
+        </div>
+        
+        <div class="switch-account">
+            <a href="{{ url_for('index') }}">← Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+<script>
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const type = passwordInput.type === 'password' ? 'text' : 'password';
+    passwordInput.type = type;
+}
+</script>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Account - Nguyen Phan{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-avatar">
+            <div class="auth-logo">{{ session.fullname[0] | upper }}</div>
+            <h2>{{ session.fullname }}</h2>
+            <p class="auth-email">{{ session.username }}@gmail.com</p>
+        </div>
+        
+        <div class="auth-user-info">
+            <div class="user-info-avatar">
+                {{ session.fullname[0] | upper }}
+            </div>
+            <div class="user-info-details">
+                <h4>{{ session.fullname }}</h4>
+                <p>{{ session.username }}@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="auth-alternative" style="margin-top: 0;">
+            <a href="{{ url_for('logout') }}" class="auth-btn auth-btn-primary" style="display: inline-block; width: auto; padding: 0.6rem 1.5rem; text-decoration: none;">Sign out</a>
+        </div>
+        
+        <div class="auth-divider">
+            <span>or</span>
+        </div>
+        
+        <div class="auth-alternative">
+            <a href="{{ url_for('index') }}">← Back to Home</a>
+        </div>
+        
+        <div class="switch-account">
+            <a href="{{ url_for('register') }}">Add another account</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

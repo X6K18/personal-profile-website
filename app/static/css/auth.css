@@ -1,0 +1,307 @@
+/* ============================================
+   AUTH.CSS - Google-style Authentication
+   ============================================ */
+
+/* Auth Container */
+.auth-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  max-width: 450px;
+  width: 100%;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+}
+
+/* Avatar/Logo Section */
+.auth-avatar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.auth-avatar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.auth-avatar .auth-email {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Welcome Text */
+.auth-welcome {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-welcome h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-welcome p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+.auth-form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
+}
+
+.input-group input.error {
+  border-color: #e74c3c;
+}
+
+.input-group label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  background: var(--bg-card);
+  padding: 0 0.25rem;
+  color: var(--accent-primary);
+}
+
+/* Floating Label - đặc biệt cho style Google */
+.input-group.floating {
+  position: relative;
+}
+
+.input-group.floating input {
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.input-group.floating label {
+  top: 0.9rem;
+  font-size: 1rem;
+}
+
+.input-group.floating input:focus + label,
+.input-group.floating input:not(:placeholder-shown) + label {
+  top: 0.3rem;
+  font-size: 0.7rem;
+}
+
+/* Password Toggle */
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.auth-btn {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.auth-btn-primary {
+  background: var(--gradient-1);
+  color: white;
+  border: none;
+}
+
+.auth-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--text-muted);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.auth-divider span {
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Alternative Actions */
+.auth-alternative {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.auth-alternative a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-alternative a:hover {
+  text-decoration: underline;
+}
+
+/* User Info Display */
+.auth-user-info {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-info-details h4 {
+  margin-bottom: 0.25rem;
+}
+
+.user-info-details p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Switch Account */
+.switch-account {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.switch-account a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+/* Password Strength (for register) */
+.password-strength {
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  height: 3px;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.strength-bar.weak {
+  width: 33%;
+  background: #e74c3c;
+}
+
+.strength-bar.medium {
+  width: 66%;
+  background: #f1c40f;
+}
+
+.strength-bar.strong {
+  width: 100%;
+  background: #2ecc71;
+}
+
+.strength-text {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+  
+  .auth-avatar h2 {
+    font-size: 1.25rem;
+  }
+}
